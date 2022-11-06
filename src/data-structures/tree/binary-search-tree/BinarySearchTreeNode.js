@@ -19,7 +19,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
    * @return {BinarySearchTreeNode}
    */
   insert(value) {
-    // only if the root node exist but its value is also removed, 
+    // only if the root node exist but its value is also removed,
     // so using the binary tree node we can inser the data to root node
 
     if (this.nodeValueComparator.equal(this.value, null)) {
