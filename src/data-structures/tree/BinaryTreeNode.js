@@ -221,12 +221,12 @@ export default class BinaryTreeNode {
 
     // Add left node.
     if (this.left) {
-      traverse = traverse.concat(this.left.traverseInOrder());
+      traverse = traverse.concat(this.left.traversePreOrder());
     }
 
     // Add right node.
     if (this.right) {
-      traverse = traverse.concat(this.right.traverseInOrder());
+      traverse = traverse.concat(this.right.traversePreOrder());
     }
 
     return traverse;
