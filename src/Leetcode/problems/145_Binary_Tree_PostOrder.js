@@ -10,18 +10,20 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-const preorderTraversal = function (root) {
+const postorderTraversal = (root) => {
   let traverse = [];
-  if (root) traverse.push(root.val);
-  else return traverse;
+  if (root) {
+    // pass
+  } else return traverse;
   if (root.left) {
-    traverse = traverse.concat(preorderTraversal(root.left));
+    traverse = traverse.concat(postorderTraversal(root.left));
   }
   if (root.right) {
-    traverse = traverse.concat(preorderTraversal(root.right));
+    traverse = traverse.concat(postorderTraversal(root.right));
   }
+  traverse.push(root.val);
 
   return traverse;
 };
 
-preorderTraversal();
+postorderTraversal();
