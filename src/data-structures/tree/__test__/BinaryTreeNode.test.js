@@ -51,6 +51,8 @@ describe('BinaryTreeNode', () => {
 
     expect(rootNode.traversePreOrder()).toEqual([2, 1, 3]);
 
+    expect(rootNode.traversePostOrder()).toEqual([1, 3, 2]);
+
     expect(rootNode.toString()).toBe('1,2,3');
   });
 

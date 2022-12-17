@@ -233,6 +233,27 @@ export default class BinaryTreeNode {
   }
 
   /**
+   * @return {*[]}
+   */
+  traversePostOrder() {
+    let traverse = [];
+
+    // Add left node.
+    if (this.left) {
+      traverse = traverse.concat(this.left.traversePreOrder());
+    }
+
+    // Add right node.
+    if (this.right) {
+      traverse = traverse.concat(this.right.traversePreOrder());
+    }
+    // Add root.
+    traverse.push(this.value);
+
+    return traverse;
+  }
+
+  /**
    * @return {string}
    */
   toString() {
