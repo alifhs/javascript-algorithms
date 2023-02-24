@@ -1,5 +1,6 @@
 //From GeeksForGeeks
 	// JavaScript program for insertion in AVL Tree
+    //on every node insertion we are updating the height of the node(successor to predecessor) recursively
 	class Node {
 		constructor(d) {
 		this.key = d;
@@ -148,9 +149,9 @@
 	/* The constructed AVL Tree would be
 			30
 			/ \
-		20 40
-		/ \ \
-		10 25 50
+		  20   40
+		 / \     \
+		10 25    50
 		*/
 	console.log(
 	"Preorder traversal of the " + "constructed AVL tree is \n"
